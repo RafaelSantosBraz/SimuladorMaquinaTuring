@@ -55,13 +55,15 @@ namespace SMT
                 foreach(Fita fita in this.Fitas)
                 {
                     Resposta resposta = this.Maquina.executar(fita);
-                    if (resposta != null)
+                    if (resposta != null && resposta.Resultado == 1)
                     {
-                        arquivo.WriteLine(resposta.Resultado + ';' + resposta.Fita.imprimir());
+                        arquivo.WriteLine(resposta.Resultado.ToString() + ';' + resposta.Fita.imprimir());
+                        Console.WriteLine(resposta.Resultado.ToString() + ';' + resposta.Fita.imprimir());
                     }
                     else
                     {
                         arquivo.WriteLine("0;" + resposta.Fita.imprimir());
+                        Console.WriteLine("0;" + resposta.Fita.imprimir());
                     }
                 }
                 arquivo.Close();

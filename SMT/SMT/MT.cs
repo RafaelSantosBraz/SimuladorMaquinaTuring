@@ -72,8 +72,7 @@ namespace SMT
                 if (transicao.EstadoAtual == estadoAtual && transicao.LeituraFita == leiturafita)
                 {
                     return transicao;
-                }
-                return null;
+                }        
             }
             return null;
         }
@@ -105,14 +104,16 @@ namespace SMT
                 }
                 this.EstadoAtual = transicao.ProximoEstado;
                 transicao = funcaoTransicao(this.EstadoAtual, fita.Atual.Simbolo);
-            }
+            }            
             if (this.F.Contains(this.EstadoAtual))
             {
+                this.EstadoAtual = this.Q0;
                 return new Resposta(fita, 1);
             }
             else
             {
-                return null;
+                this.EstadoAtual = this.Q0;
+                return new Resposta(fita, 0);
             }
         }
     }
