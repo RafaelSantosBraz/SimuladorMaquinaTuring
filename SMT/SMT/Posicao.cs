@@ -8,15 +8,19 @@ namespace SMT
 {
     class Posicao
     {
-        char simbolo;
-        Posicao ant;
-        Posicao prox;
+        private char simbolo;
+        private Posicao ant;
+        private Posicao prox;
 
         public Posicao(char simbolo)
         {
-            this.simbolo = simbolo;
-            this.ant = null;
-            this.prox = null;
-        }      
+            this.Simbolo = simbolo;
+            this.Ant = null;
+            this.Prox = null;
+        }
+
+        public char Simbolo { get => simbolo; set => simbolo = value; }
+        internal Posicao Ant { get => ant; set => ant = value; }
+        internal Posicao Prox { get => prox; set => prox = value; }
     }
 }
