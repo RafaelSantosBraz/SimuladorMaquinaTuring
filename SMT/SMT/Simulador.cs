@@ -58,12 +58,12 @@ namespace SMT
                     if (resposta != null && resposta.Resultado == 1)
                     {
                         arquivo.WriteLine(resposta.Resultado.ToString() + ';' + resposta.Fita.imprimir());
-                        Console.WriteLine(resposta.Resultado.ToString() + ';' + resposta.Fita.imprimir());
+                        //Console.WriteLine(resposta.Resultado.ToString() + ';' + resposta.Fita.imprimir());
                     }
                     else
                     {
                         arquivo.WriteLine("0;" + resposta.Fita.imprimir());
-                        Console.WriteLine("0;" + resposta.Fita.imprimir());
+                        //Console.WriteLine("0;" + resposta.Fita.imprimir());
                     }
                 }
                 arquivo.Close();
