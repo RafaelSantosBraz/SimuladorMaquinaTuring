@@ -52,7 +52,7 @@ namespace SMT
 
         public bool direita() //move o ponteiro atual para o elemento à direita
         {
-            if (this.Atual != null)
+            if (this.Atual.Prox != null)
             {
                 this.Atual = this.Atual.Prox;
                 return true;
@@ -62,7 +62,7 @@ namespace SMT
 
         public bool esquerda() //move o ponteiro atual para o elemento à esquerda
         {
-            if (this.Atual != null)
+            if (this.Atual.Ant != null)
             {
                 this.Atual = this.Atual.Ant;
                 return true;
