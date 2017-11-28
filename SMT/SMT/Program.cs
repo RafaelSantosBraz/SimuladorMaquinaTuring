@@ -11,8 +11,8 @@ namespace SMT
         static void Main(string[] args)
         {
             //args = new string[3];
-            //args[0] = "R:\\GitHub\\SimuladorMaquinaTuring\\SMT\\config.txt";
-            //args[1] = "R:\\GitHub\\SimuladorMaquinaTuring\\SMT\\fitas.txt";
+            //args[0] = "R:\\GitHub\\SimuladorMaquinaTuring\\SMT\\configAnBn.txt";
+            //args[1] = "R:\\GitHub\\SimuladorMaquinaTuring\\SMT\\fitasAnBn.txt";
             //args[2] = "R:\\GitHub\\SimuladorMaquinaTuring\\SMT\\out.txt";
             if (args.Length == 3)
             {
